@@ -1,0 +1,44 @@
+{% extends 'Navbar.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block body %}
+ <div class="card-group">
+  <div class="card">
+    <img src="{% static 'images/car1.png' %}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Tata Harrier EV</h5>
+      <p class="card-text">Rent-self driving-1 Hour-₹200  </p>
+    </div>
+    <div class="card-footer">
+      <small class="text-body-secondary">Rent Now</small>
+    </div>
+  </div>
+  <div class="card">
+    <img src="{% static 'images/car2.png' %}" class="card-img-top" alt="..." width="360" height="290">
+    <div class="card-body">
+      <h5 class="card-title">MG ZS EV</h5>
+      <p class="card-text">Rent-self driving-1 Hour-₹250</p>
+    </div>
+    <div class="card-footer d-flex justify-content-center">
+    <button type="button" class="btn btn-outline-primary">Rent</button>
+    </div>
+  </div>
+  <div class="card">
+    <img src="{% static 'images/car3.png' %}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Tesla Roadstar</h5>
+      <p class="card-text">Rent-self driving- 1 Hour-₹2500</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-body-secondary">Rent Now</small>
+    </div>
+  </div>
+</div>
+{% endblock %}
+</body>
+</html>
