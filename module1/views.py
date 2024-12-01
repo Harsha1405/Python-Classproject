@@ -118,8 +118,8 @@ def weatherpagecall(request):
 def weatherlogic(request):
     if request.method == 'POST':
         place = request.POST['place']
-        API_KEY = 'bd2cab6ade861be6cba891cbc9944638'
-        url = f'http://api.openweathermap.org/data/2.5/weather?q={place}&appid={API_KEY}'
+        API_KEY = ''
+        url = ''
         response = requests.get(url)
         if response.status_code == 200:
             data = response.json()
@@ -153,7 +153,7 @@ def feedbackfunction(request):
         send_mail(
             "Thank you for contacting harsha travels",
             tosend,
-            '2200030060cseh@gmail.com',
+            '',
             [email],
             fail_silently=False,
         )
