@@ -5,7 +5,7 @@ from django.shortcuts import render
 
 # Create your views here.
 def send_emails(request):
-    csv_file_path =r'D:\PFSD PROJECT\django\TTM\static\mail.csv'
+    csv_file_path =r'mail.csv path'
     with open(csv_file_path, 'r') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
@@ -15,7 +15,7 @@ def send_emails(request):
             send_mail(
                 subject,
                 message_body,
-                '2200030060cseh@gmail.com',
+                'ur mail_id',
                 [recipient_email],
                 fail_silently=False,
             )
